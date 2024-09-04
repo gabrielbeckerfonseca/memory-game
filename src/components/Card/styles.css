@@ -1,0 +1,36 @@
+.cardContent {
+    position: relative;
+    width: 100%;
+    /* height: 100%; 1/1 melhor substituir por width e height igual, nem todo navegador suporta o aspect-ratio */
+    aspect-ratio: 1/1;
+    background-color: aquamarine;
+    transform-style: preserve-3d;
+    transition: transform 600ms ease-in-out;
+}
+
+.cardContentFlipped{
+    transform: rotateY(180deg);
+}
+
+.cardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    cursor: pointer;
+}
+
+.cardFaceFront{
+    background: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.cardFaceBack{
+    background: var(--color-secondary);
+    color: var(--color-text-dark);
+    transform: rotateY(180deg);
+}
